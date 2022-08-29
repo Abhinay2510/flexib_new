@@ -6,3 +6,5 @@
   tasks:
     - name: Run powershell script
       script: Files/docker_install.ps1
+    - name: Reboot the machine with all defaults
+      ansible.windows.win_reboot:
