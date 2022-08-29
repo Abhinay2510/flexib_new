@@ -3,8 +3,8 @@
   hosts: all 
   gather_facts: false
   tasks:
-    - name: Run powershell script
-      ansible.builtin.shell: |
+    - name: Run multi-lined shell commands
+      win_shell: |
            powershell
            cd C:\Users\Administrator\Downloads
            Remove-Item -path ${pwd}\* -recurse -force
