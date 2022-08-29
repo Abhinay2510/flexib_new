@@ -6,6 +6,6 @@
     - name: Run multi-lined shell commands
       win_shell: |
            powershell
-           cd C:\Users\Administrator\Downloads
+           cd C:\Users\Administrator\performance-scirpt
            Remove-Item -path ${pwd}\* -recurse -force
            docker run --rm --name test -v ${pwd}:C:\JMETER_PROJECT\project harishpallapu/3i-jmeter:latest -Command "C:\JMETER_PROJECT\apache-jmeter-5.4.2\bin\jmeter.bat --version;cd project;git clone https://github.com/Poornateja2509/NRTC_JMeter.git;C:\JMETER_PROJECT\apache-jmeter-5.4.2\bin\jmeter.bat -n -t NRTC_JMeter/*.jmx -l result.jtl -e -o result.html;ls;pwd"
