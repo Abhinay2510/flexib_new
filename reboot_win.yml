@@ -2,5 +2,8 @@
   hosts: all 
   gather_facts: false
   tasks:
-    - name: Reboot the machine with all defaults
-      ansible.windows.win_reboot:
+     - name: reboot host(s)
+       ansible.windows.win_reboot:
+        msg: "reboot by Ansible"
+        pre_reboot_delay: 5
+        post_reboot_delay: 10
