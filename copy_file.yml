@@ -9,3 +9,4 @@
              Set-Item wsman:\localhost\client\trustedhosts * -Confirm:$False
              Restart-Service WinRM
              $session= New-PSSession  -ComputerName 172.31.10.7 -Credential Administrator
+             copy-item -Path C:\Users\Administrator\Downloads -Destination C:\Users\Administrator
