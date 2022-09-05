@@ -7,5 +7,5 @@
       win_shell: |
            Powershell
            Enable-PSRemoting -Force
-           Set-Item wsman:\localhost\client\trustedhosts * -Confirm:$False
+           Set-Item wsman:\localhost\client\trustedhosts * -Confirm:$False -Force
              
