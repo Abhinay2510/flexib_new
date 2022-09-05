@@ -5,7 +5,7 @@
   
     - name: Run multi-lined shell commands
       win_shell: |
- 
+           Powershell
            Copy-Item -Path C:\Users\Administrator\Downloads\result.html\* -ToSession $session -Destination 'C:\Users\Administrator\reports'
 
              
