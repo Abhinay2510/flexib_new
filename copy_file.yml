@@ -6,6 +6,6 @@
     - name: Run multi-lined shell commands
       win_shell: |
            Powershell
- 
+           Enable-PSRemoting -Force
 
              
