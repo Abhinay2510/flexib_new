@@ -1,15 +1,11 @@
----
-- name: copy file
-  hosts: all
-  become: true
-  become_user: sample
-  become_method: su
-  become_exe: sudo su -
-  
+- name: Run powershell script
+  hosts: all 
   gather_facts: false
   tasks:
   
     - name: copy file
       ansible.builtin.shell: |
-             sudo sudo sshpass -p 'infotech@12' scp -r /home/sample/NRTC_JMeter ssh ansible@43.204.249.145:C:\\
-
+             Enable-PSRemoting -Force
+             Set-Item wsman:\localhost\client\trustedhosts * -Confirm:$False
+             Restart-Service WinRM
+             $session= New-PSSession  -ComputerName 172.31.10.7 -Credential Administrator
