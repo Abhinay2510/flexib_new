@@ -6,6 +6,7 @@
     - name: Run multi-lined shell commands
       win_shell: |
            Powershell
+           $session= New-PSSession  -ComputerName 172.31.34.227 -Credential $cred
            Copy-Item -Path C:\Users\Administrator\Downloads\result.html\* -ToSession $session -Destination 'C:\Users\Administrator\reports'
 
              
