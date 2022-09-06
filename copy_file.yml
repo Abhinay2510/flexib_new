@@ -10,7 +10,7 @@
            $password = ConvertTo-SecureString -String ";9yFGnsXC)b;ak9Q6QlTJ?Rjy;v=H@fW" -AsPlainText -Force
            $cred = new-object -typename System.Management.Automation.PSCredential -argumentlist $username, $password
            set-item wsman:\localhost\client\trustedhosts -Concatenate -value '172.31.34.227'
-           Invoke-Command -ComputerName 172.31.34.227 -Credential $cred -ScriptBlock {Get-Service winrm}
+           Invoke-Command -ComputerName 172.31.34.227 -Credential $cred -ScriptBlock {Get-Service winrm} -Force 
            $session= New-PSSession  -ComputerName 172.31.34.227 -Credential $cred
            Get-PSSession
 
