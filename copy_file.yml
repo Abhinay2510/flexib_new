@@ -6,8 +6,6 @@
     - name: Run multi-lined shell commands
       win_shell: |
            Powershell
- #         Enable-PSRemoting -Force
-  #         Set-Item wsman:\localhost\client\trustedhosts * -Confirm:$False -Force
            $username = "Administrator"
            $password = ConvertTo-SecureString -String ";9yFGnsXC)b;ak9Q6QlTJ?Rjy;v=H@fW" -AsPlainText -Force
            $cred = new-object -typename System.Management.Automation.PSCredential -argumentlist $username, $password
