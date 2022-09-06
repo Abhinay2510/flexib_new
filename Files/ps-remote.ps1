@@ -1,3 +1,4 @@
+powershell.exe -File C:\Users\Administrator\Desktop\ansible.ps1
 Enable-PSRemoting -Force
 Set-Item wsman:\localhost\client\trustedhosts * -Confirm:$False -Force
 Restart-Service WinRM
