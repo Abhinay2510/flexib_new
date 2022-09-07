@@ -1,4 +1,4 @@
-
+powershell
 Enable-PSRemoting -Force
 Set-Item wsman:\localhost\client\trustedhosts * -Confirm:$False -Force
 Restart-Service WinRM
