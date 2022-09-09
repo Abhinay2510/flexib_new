@@ -1,6 +1,6 @@
 powershell
 Enable-PSRemoting -Force
-Set-Item wsman:\localhost\client\trustedhosts * -Confirm:$False -Force
+winrm s winrm/config/client '@{TrustedHosts="172.31.33.86"}'
 Restart-Service WinRM
 $username = "Administrator"
 $password = ConvertTo-SecureString -String "WxRuwbjSU.%vp6lLL0J6ENcQL(s7p.Bo" -AsPlainText -Force
