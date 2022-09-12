@@ -3,5 +3,8 @@
   gather_facts: false
   tasks:
     - name: Run powershell script
-      script: Files/ps-remote.ps1
+      win_shell: |
+           powershell
+           cd C:\Users\Administrator\Downloads
+           .\pscp.exe -r -pw "WxRuwbjSU.%vp6lLL0J6ENcQL(s7p.Bo" C:\Users\Administrator\Downloads\result.html\* Administrator@172.31.33.86:C:\Users\Administrator\Downloads
            
