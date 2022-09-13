@@ -6,7 +6,7 @@
    tags: provisioning
 
    vars_files:
-     - variable.yml
+     - ec2_variable.yml
    tasks:
 
      - name: Task # 1 - Create my security group
