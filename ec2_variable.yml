@@ -1,0 +1,8 @@
+keypair: ansible_tower
+instance_type: t2.small
+image: ami-08df646e18b182346
+wait: yes
+group: webserver
+count: 1
+region: ap-south-1
+security_group: testec2-security-grp
