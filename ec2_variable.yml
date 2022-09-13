@@ -1,6 +1,6 @@
 keypair: ansible_tower
-instance_type: t2.small
-image: ami-08df646e18b182346
+instance_type: t2.micro
+image: ami-0b02eacf129bfac4e
 wait: yes
 group: webserver
 count: 1
