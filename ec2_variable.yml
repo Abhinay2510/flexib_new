@@ -1,4 +1,5 @@
-keypair: jmeter
+Instance_Name: testing
+keypair: ansible_tower
 instance_type: t2.micro
 image: ami-0b02eacf129bfac4e
 wait: yes
