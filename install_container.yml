@@ -12,4 +12,4 @@
           Install-Module -Name DockerMsftProvider -Repository PSGallery -Confirm:$False
           
           Install-Package -Name docker -ProviderName DockerMsftProvider  -Confirm:$False
-          Restart-Computer -force
+          Restart-Computer -F
