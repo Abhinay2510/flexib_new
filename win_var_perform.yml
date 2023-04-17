@@ -1,3 +1,4 @@
 github_url: https://github.com/harishpallapu/NRTC_02.git
 script_name: NRTC_02
 Jthreads: 30
+Jrampup: 11

@@ -12,4 +12,4 @@
            powershell
            cd C:\Users\Administrator\Downloads
            Remove-Item -path ${pwd}\* -recurse -force
-           docker run --rm --name test -v ${pwd}:C:\JMETER_PROJECT\project harishpallapu/3i-jmeter:latest -Command "C:\JMETER_PROJECT\apache-jmeter-5.4.2\bin\jmeter.bat --version;cd project;git clone "{{ github_url }}";C:\JMETER_PROJECT\apache-jmeter-5.4.2\bin\jmeter.bat -Jthreads="{{ Jthreads }}" -n -t "{{ script_name }}"/*.jmx -l result.jtl -e -o result.html;ls;pwd"
+           docker run --rm --name test -v ${pwd}:C:\JMETER_PROJECT\project harishpallapu/3i-jmeter:latest -Command "C:\JMETER_PROJECT\apache-jmeter-5.4.2\bin\jmeter.bat --version;cd project;git clone "{{ github_url }}";C:\JMETER_PROJECT\apache-jmeter-5.4.2\bin\jmeter.bat -Jthreads="{{ Jthreads }}" -Jrampup="{{ Jrampup }}" -n -t "{{ script_name }}"/*.jmx -l result.jtl -e -o result.html;ls;pwd"
